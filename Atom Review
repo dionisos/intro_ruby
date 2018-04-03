@@ -1,0 +1,58 @@
+---------------------------------------------
+  Comandos Atom
+---------------------------------------------
+
+Ctrl+Shift+U          Muestra la codificación del archivo y permite cambiarla
+Cmd+Shift+P           Command Palette (Búsqueda de comandos)
+Cmd+,                 Configuración y preferencias
+Cmd+O                 Abrir un archivo
+Cmd+S                 Salvar un archivo
+Cmd+Shift+S           Salvar con un nombre diferente
+Alt+Cmd+S             Salva todos los archivos abiertos en Atom
+Cmd+Shift+O           Abre un directorio con todos sus archivos en Atom
+
+Cmd+K Cmb+B           Mostrar/Ocultar el Tree View de archivos (tree-view:toggle)
+Ctrl+0                Dar el focus al Tree View (para trabajar con archivos y carpetas)
+                      ~ A (agregar), M (mover), Delete (eliminar)
+Cmd+T ó Cmd+P         Buscar y abrir un archivo dentro del Proyecto
+Cmb+B                 Busca sólo sobre archivos recientes
+                      ~ es posible modificar p.e. fuzzy-finder.ignoredNames
+
+Alt+Left ó Alt+B      Mueve el cursor al inicio de una palabra
+Alt+Right ó Alt+F     Mueve el cursor al final de una palabra
+Cmd+Left ó Ctrl+A     Desplaza al inicio de la línea en curso
+Cmd+Right ó Ctrl+E    Desplaza al final de la línea en curso
+Cmd+Up                Mueve al inicio del archivo
+Cmd+Down              Mueve al final del archivo
+Ctrl+G                Coloca el cursor en una posición específica row:column
+Cmd+R                 Permite brincar entre símbolos (p.e. definiciones de métodos)
+                      ~ los tags pueden generarse mediante la utilidad 'ctags'
+
+Cmd+F2                Atom "tooglea" un bookmark en la línea actual
+F2                    El cursor brinca al siguiente bookmark
+Shift+F2              El cursor regresa al bookmark anterior
+Ctrl+F2               Se muestran todos los bookmars definidos en Atom
+
+Cmd+A                 Selecciona todo el contenido del archivo
+Cmd+L                 Selecciona una línea completamente
+Ctrl+Shift+W          Selecciona una palabra
+Cmd+J                 Une dos líneas consecutivas
+Cmd+Ctrl+Up/Down      Mueva la línea actual arriba/abajo
+Cmd+Shift+D           Duplica la línea actual
+Ctrl+Shift+K          Borra la línea actual
+Alt+H                 Borra la palabra anterior
+Alt+D                 Borra la palabra siguiente
+Ctrl+K                Corta hasta el final de la línea
+Cmd+Delete            Corta al principio de la línea
+
+Cmd+D                 Selecciona la siguiente palabra identica a la actual
+Cmd+Ctrl+G            Selecciona todas las palabras iguales a la actual
+                      ~ permite renombrar variables p.e.
+
+Cmd+F                           Busca y reemplaza dentro del buffer actual
+Cmd+Shift+F                     Busca y reemplaza en el proyecto entero
+Cmd+K Up/Down/Left/Right        Divide el editor en varias direcciones
+Cmd+K Cmd+Up/Down/Left/Right    Posiciona en alguno de los paneles de edición
+
+Ctrl+9                Muestra el panel Git
+Ctrl+8                Muestra el panel Github
