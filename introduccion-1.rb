@@ -96,5 +96,79 @@ end
 
 my_method
 
-# Pendiente
-# Guide to method arguments in Ruby
+
+def full_name(first_name, last_name)
+  first_name + " " + last_name
+end
+
+puts full_name("Carlos", "Soria")
+
+def full_name_alterno first_name, last_name
+  first_name + " " + last_name
+end
+
+# El estilo de programación sin parentesis es preferido por los programadores Ruby!
+puts full_name_alterno "Carlos", "Soria"
+
+# Podemos nombrar los argumentos de un método para hacer el código más descriptivo.
+# En realidad no hay diferencia, sólo beneficia en evitar errores :P
+# Cabe mencionar que no implica que puedan pasarse menos argumentos a los métodos ¬¬
+
+def print_address city:, state:, zip:
+  puts city + " " + state + " " + zip
+end
+
+print_address city: "Scottsdale", state: "AZ", zip: "85251"
+
+# Es posible desde la definición de un método indicar argumentos por default,
+# con ello al menos que se requiera un valor diferente puede ignorarse de la lista de argumentos.
+
+def stream_movie title:, lang: lang = 'English'
+  puts title
+  puts lang
+end
+
+stream_movie title: 'The Fountainhead'
+stream_movie title: 'The Fountainhead', lang: 'Spanish'
+
+# TRADITIONAL SPLAT ARGUMENTS
+# Para indicar que un método puede recibir uno o más argumentos a petición se debe
+# utilizar un asterisco delante del nombre del parámetro.
+# Internamente el argumento puede ser tratado como un arreglo dentro del método.
+
+def roster *players
+  puts players
+end
+
+roster 'Altuve', 'Gattis', 'Springer'
+
+# KEYWORD-BASED SPLAT ARGUMENTS
+# Para indicar que se está recibiendo un conjunto de datos identificados por llave se usa doble asterisco.
+# En este tipo de casos podemos separar cada dupla recibida en llave y valor e utilizarles en un loop ~
+def rosterkb **players_with_positions
+  players_with_positions.each do |player, position|
+    puts "Player: #{player}" + ", Position: #{position}"
+  end
+end
+
+data = {
+  "Altuve": "2nd Base",
+  "Alex Bregman": "3rd Base",
+  "Evan Gattis": "Catcher",
+  "George Springer": "OF"
+}
+
+rosterkb data
+
+# OPTIONAL ARGUMENTS
+# Para el manejo de argumentos opcionales se utiliza un hash en la definición del método
+# No obstante hay que tener mucho cuidado ya que si se trata de utilizar un argumento no existente,
+# ningún error es generado, sencillamente no ocurre nada!!
+
+def invoice options={}
+  puts options[:company]
+  puts options[:total]
+  puts options[:something_else]
+end
+
+invoice company: "Google", total: 123, state: "AZ"
